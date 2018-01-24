@@ -1,9 +1,10 @@
 #!/bin/sh
 ################################################################################
-# This script sync Latest RedHat Repos to /home/REPO/ directory                #
+# This script sync Latest RedHat Repos to /home/REPO/ directory and make       #
+# tar.gz archive which will be ready to distribute to secure invironment.      #
 # It's required RH7 machine which MUST have direct access to the internet      #
 # All repos must be registered and subscribed to RedHat prior to run this      #
-# script 								       #
+# script 								                                                       #
 ################################################################################
 ###############################
 ###### Sergey Kharlamov  ######
