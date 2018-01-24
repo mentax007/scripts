@@ -6,7 +6,7 @@
 # script 								       #
 ################################################################################
 ###############################
-###### mentax            ######
+###### Sergey Kharlamov  ######
 ###### Jan 2018          ######
 ###############################
 
@@ -23,6 +23,8 @@
 # Subscribe to RHN Repo channels
 # subscription-manager attach --pool=<POOL_ID> --pool=<POOL_ID>
 
+
+
 echo
 echo -e "\e[44m##### !!! WARNING !!! ##### !!! WARNING !!! ##### !!! WARNING !!! #####\e[0;39m"
 echo -e "\e[44m#\e[0;39m"
@@ -34,6 +36,8 @@ echo
 read -p "Are you sure you want to continue <Yes/No>" prompt
 if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 then
+
+echo Sync start at `date '+%Y-%m-%d-%H:%M'` > /home/REPO/repo_create.log
 
 # Install EPEL Fresh REPO
 echo
@@ -136,14 +140,14 @@ echo -e "\e[41m Updating Repodata for new REPOs\e[0;39m"
 echo
 
 # Show directory structure (for debug)
-echo "RHEL7 Folder structure" > /home/REPO/repo_create.log
+echo "RHEL7 Folder structure" >> /home/REPO/repo_create.log
 ls -la /home/REPO/RHEL7 >> /home/REPO/repo_create.log
 echo "EPEL7 Folder structure" >> /home/REPO/repo_create.log
 ls -la /home/REPO/EPEL7 >> /home/REPO/repo_create.log
 
 # Create VERSION file
 echo -e "\e[41m Repo sync date to /home/REPO/VERSION\e[0;39m"
-echo This REPO was created by `date '+%Y-%m-%d-%H:%M'` > /home/REPO/VERSION
+echo This REPO was created by `date '+%Y-%m-%d-%H:%M'` >> /home/REPO/VERSION
 echo
 
 # Make archive which is ready to be distributed
@@ -159,6 +163,8 @@ echo -e "\e[36m#########\e[0;39m \e[31mREPO Sysncronization is done\e[0;39m \e[3
 echo -e "\e[36m#######################################################\e[0;39m"
 echo
 echo -e "Repo location: \e[31m/home/$REPO_ARCHIVE\e[0;39m"
+
+echo Sync finished at `date '+%Y-%m-%d-%H:%M'` >> /home/REPO/repo_create.log
 
 else
   exit 0
