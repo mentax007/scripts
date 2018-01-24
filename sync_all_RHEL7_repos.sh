@@ -24,8 +24,6 @@
 # Subscribe to RHN Repo channels
 # subscription-manager attach --pool=<POOL_ID> --pool=<POOL_ID>
 
-
-
 echo
 echo -e "\e[44m##### !!! WARNING !!! ##### !!! WARNING !!! ##### !!! WARNING !!! #####\e[0;39m"
 echo -e "\e[44m#\e[0;39m"
