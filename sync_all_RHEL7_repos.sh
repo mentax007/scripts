@@ -154,12 +154,14 @@ echo This REPO created `date '+%Y-%m-%d-%H:%M'` > /home/REPO/RHEL7/VERSION
 echo
 
 # Make archive which is ready to be distributed
+# RHEL7
 echo -e "\e[41m Archiving new RHEL7 repo \e[0;39m"
 DATE=`date '+%Y-%m-%d'`
 RHEL7_REPO_ARCHIVE="RHEL7-REPO-$DATE.tar.gz"
 cd /home/
 tar -zcvf /home/$RHEL7_REPO_ARCHIVE REPO/RHEL7
 
+# EPEL7
 echo -e "\e[41m Archiving new EPEL7 repo\e[0;39m"
 EPEL7_REPO_ARCHIVE="EPEL7-REPO-$DATE.tar.gz"
 cd /home/
