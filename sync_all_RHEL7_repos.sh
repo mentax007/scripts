@@ -141,7 +141,7 @@ echo -e "\e[41m Updating Repodata for new repo EPEL7\e[0;39"
 echo
 
 # Show directory structure (for debug)
-echo "##### RHEL7 Folder structure #####" > /home/REPO/repo_create.log
+echo "##### RHEL7 Folder structure #####" >> /home/REPO/repo_create.log
 ls -la /home/REPO/RHEL7 >> /home/REPO/repo_create.log
 echo "##### EPEL7 Folder structure #####" >> /home/REPO/repo_create.log
 ls -la /home/REPO/EPEL7 >> /home/REPO/repo_create.log
