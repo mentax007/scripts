@@ -36,7 +36,7 @@ read -p "Are you sure you want to continue <Yes/No>" prompt
 if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 then
 
-echo Sync job start at `date '+%Y-%m-%d-%H:%M'` > /home/REPO/repo_create.log
+echo Sync job started at `date '+%Y-%m-%d-%H:%M'` > /home/REPO/repo_create.log
 
 # Install EPEL Fresh REPO
 echo
@@ -164,6 +164,8 @@ echo -e "\e[41m Archiving new EPEL7 repo\e[0;39m"
 EPEL7_REPO_ARCHIVE="EPEL7-REPO-$DATE.tar.gz"
 cd /home/
 tar -zcvf /home/$EPEL7_REPO_ARCHIVE REPO/EPEL7
+
+echo Sync job ended at `date '+%Y-%m-%d-%H:%M'` >> /home/REPO/repo_create.log
 
 echo -e "\e[36m#######################################################\e[0;39m"
 echo -e "\e[36m#########\e[0;39m \e[31mREPO Sysncronization is done\e[0;39m \e[36m ###############\e[0;39m"
