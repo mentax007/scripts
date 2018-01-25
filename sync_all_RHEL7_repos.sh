@@ -58,6 +58,8 @@ enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage" > /etc/yum.repos.d/GlusterFS.repo
 
 # Remove OLD stuff from previous script run job
+echo -e "\e[41mCleanup environment from previous run \e[0;39m"
+echo
 rm -rf /home/REPO/TMP
 mkdir -p /home/REPO/TMP
 rm -rf /home/REPO/RHEL7
