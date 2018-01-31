@@ -159,7 +159,7 @@ tar -zcvf /home/$RHEL7_REPO_ARCHIVE REPO/RHEL7
 echo Sync job ended at `date '+%Y-%m-%d-%H:%M'` >> /home/REPO/repo_create.log
 
 echo -e "\e[36m#######################################################\e[0;39m"
-echo -e "\e[36m#########\e[0;39m \e[31mREPO Sysncronization is done\e[0;39m \e[36m ###############\e[0;39m"
+echo -e "\e[36m#########\e[0;39m \e[31mREPO Synchronization is done\e[0;39m \e[36m ###############\e[0;39m"
 echo -e "\e[36m#######################################################\e[0;39m"
 echo
 echo -e "RHEL7 repo location: \e[31m/home/$RHEL7_REPO_ARCHIVE\e[0;39m"
